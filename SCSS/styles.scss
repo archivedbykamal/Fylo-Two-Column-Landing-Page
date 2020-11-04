@@ -1,0 +1,690 @@
+@import "variables";
+@import "mixins";
+
+@include mQ(576px) {}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-size: $fontSize;
+    font-family: $bodyFont;
+    text-align: center;
+
+}
+
+//reset
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+li,
+button,
+footer {
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    list-style-type: none;
+}
+
+img {
+    width: 100%;
+}
+
+h1,
+h2,
+h3,
+input,
+button {
+
+    font-family: $headFont;
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+
+
+}
+
+
+header {
+    padding: 30px 0;
+
+    @include mQ(576px) {
+        padding: 35px 0;
+    }
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+        margin: 0 auto;
+        align-items: center;
+    }
+
+    .logo {
+        width: 80px;
+        height: 25px;
+
+        @include mQ(576px) {
+            width: 125px;
+            height: 40px;
+        }
+    }
+}
+
+nav {
+    ul {
+        display: flex;
+        justify-content: space-around;
+
+        li {
+            padding-left: 10px;
+            padding-right: 10px;
+
+            @include mQ(576px) {
+                padding-left: 20px;
+                padding-right: 20px;
+            }
+        }
+    }
+
+    a {
+
+        text-decoration: none;
+        color: $desaturatedBlue;
+    }
+}
+
+
+.hero {
+    margin-top: 60px;
+    margin-bottom: 60px;
+    color: $veryDarkBlue;
+
+    .container {
+        @include mQ(576px) {
+            display: flex;
+            flex-direction: row-reverse;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 0;
+            margin-bottom: 100px;
+        }
+    }
+
+
+
+    .wrapper-img {
+        padding: 4%;
+
+        @include mQ(576px) {
+            padding: 0 0 0 0;
+
+            width: 50%;
+            margin: 0 auto;
+            padding-bottom: 0;
+
+        }
+    }
+
+    .wrapper-content {
+        @include mQ(576px) {
+            text-align: left;
+            width: 40%;
+
+            h1 {
+                font-size: 2em;
+            }
+
+            p {
+                font-size: 1.05em;
+            }
+        }
+    }
+
+    h1 {
+
+        font-size: 1.6em;
+        letter-spacing: 1.5px;
+        line-height: 1.4;
+        margin-top: 15px;
+        margin-bottom: 15px;
+
+
+    }
+
+    p {
+        font-size: 1em;
+        line-height: 1.5;
+        margin-bottom: 10px;
+        width: 90%;
+        margin: 0 auto;
+
+        @include mQ(576px) {
+            width: 100%;
+
+
+        }
+    }
+
+
+}
+
+.subscribe {
+    padding: 25px 0 25px 0;
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    margin: 0 auto;
+    color: $lightGrayishBlue;
+
+    @include mQ(576px) {
+        width: 100%;
+
+
+    }
+
+
+    @include mQ(576px) {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 30px;
+    }
+
+    input {
+        border: none;
+        padding: 0.7rem 0rem 0.7rem 1rem;
+        font-size: 0.9em;
+        border-radius: 0.2em;
+        margin-top: 5px;
+        margin-bottom: 5px;
+        border: 1px solid $veryDarkBlue;
+
+        @include mQ(576px) {
+            width: 65%;
+            margin: 0;
+        }
+
+    }
+
+    button {
+        border-radius: 0.2em;
+        margin-top: 5px;
+        outline: none;
+        color: $lightGrayishBlue;
+        font-weight: 700;
+        font-size: 0.75rem;
+        border: none;
+        background: $brightBlue;
+        padding: 0.7rem 1rem;
+        border-radius: 0.2em;
+        cursor: pointer;
+
+        @include mQ(576px) {
+            font-size: 0.8em;
+            padding: 0.85rem 2.5rem 0.85rem 2.5rem;
+            margin-top: 0;
+        }
+    }
+}
+
+.bg {
+    img {
+        display: block;
+        width: 100%;
+    }
+}
+
+.testominal {
+    background: $lightGrayishBlue;
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+
+        @include mQ(576px) {
+            flex-direction: row-reverse;
+
+            align-items: center;
+
+        }
+    }
+
+
+
+    .testominal-img {
+
+
+        @include mQ(576px) {
+            padding: 5% 0 5% 0;
+            width: 55%;
+        }
+    }
+
+    .testominal-content {
+        width: 90%;
+        margin: 0 auto;
+        text-align: left;
+
+        h3 {
+            color: $veryDarkBlue;
+            text-align: center;
+            font-size: 1.05em;
+        }
+
+        @include mQ(576px) {
+            width: 40%;
+            margin-left: 0;
+
+            h3 {
+                font-size: 2.45em;
+                line-height: 1;
+                letter-spacing: 1.8px;
+                text-align: left;
+
+            }
+
+            p {
+                color: $veryDarkBlue;
+            }
+        }
+
+        p {
+            line-height: 1.5;
+            margin-top: 15px;
+            margin-bottom: 15px;
+            color: $desaturatedBlue;
+            font-size: 0.9em;
+            letter-spacing: 0.5px;
+        }
+
+        p:last-of-type {
+            margin-top: 0;
+
+        }
+    }
+
+    .testominal-link {
+        width: 45%;
+        margin: 1.5rem auto 0 auto;
+        padding-bottom: 6px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-bottom: 1.5px solid $moderateCyan;
+
+        @include mQ(576px) {
+            width: 33%;
+            margin-left: 0;
+        }
+
+        img {
+            width: 18px;
+            height: 18px;
+        }
+    }
+
+    a {
+        font-size: 0.85em;
+        color: $moderateCyan;
+
+        @include mQ(576px) {
+            font-size: 1em;
+        }
+
+
+        text-decoration: none;
+
+    }
+
+}
+
+.quote {
+
+    padding: 2.5rem 1.5rem 1.5rem 1.5rem;
+    border-radius: 0.4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 0 10px 2.5px rgba(0, 0, 0, 0.2);
+    width: 90%;
+    margin: 45px auto 80px auto;
+    box-sizing: border-box;
+    background-image: url('../images/icon-quotes.svg');
+    background-repeat: no-repeat;
+    background-size: 5%;
+    background-position: top 20px left 25px;
+
+    @include mQ(576px) {
+        padding: 2.5rem 1.5rem 0.5rem 1.5rem;
+        width: 65%;
+        margin-left: 0;
+
+    }
+
+    p {
+        font-size: 0.8em;
+        line-height: 1.5;
+        text-align: left;
+
+
+    }
+}
+
+
+
+
+
+.author {
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 1.65rem;
+
+    @include mQ(576px) {
+
+        margin-top: 0;
+        align-items: center;
+    }
+
+    img {
+        border-radius: 50%;
+        width: 32px;
+        height: 32px;
+        margin-right: .8rem;
+    }
+}
+
+
+
+.desc {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+
+
+    p:nth-child(1) {
+        font-weight: 700;
+        font-size: 0.8em;
+        letter-spacing: 0.5px;
+
+        @include mQ(576px) {
+            margin-bottom: 3px;
+
+        }
+
+    }
+
+    p:nth-child(2) {
+        font-size: 0.65em;
+        letter-spacing: 0.5px;
+    }
+}
+
+
+.modal {
+    color: $lightGrayishBlue;
+    background: $desaturatedBlue;
+    display: flex;
+    flex-direction: column;
+
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    text-align: center;
+
+
+    @include mQ(576px) {
+
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+
+    }
+
+    .modal-container {
+        width: 85%;
+        margin: 0 auto;
+
+        @include mQ(576px) {
+            width: 50%;
+            text-align: left;
+            margin-left: 5%;
+
+            h3 {
+                font-size: 1.9em;
+            }
+        }
+    }
+
+
+    p {
+        font-size: 1.1em;
+        margin-bottom: 15px;
+        margin-top: 15px;
+
+        @include mQ(576px) {
+            font-size: 1em;
+            width: 65%;
+
+
+        }
+    }
+
+}
+
+#modal-form {
+    padding: 25px 0 25px 0;
+    display: flex;
+    flex-direction: column;
+    width: 75%;
+    margin: 0 auto;
+    color: $lightGrayishBlue;
+
+    @include mQ(576px) {
+        padding: 0;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        margin-top: 30px;
+        width: 45%;
+    }
+
+    input {
+        border: none;
+        padding: 0.9rem 0rem 0.9rem 0.9rem;
+        font-size: 0.9em;
+        border-radius: 0.2em;
+        margin-top: 5px;
+        margin-bottom: 5px;
+
+        @include mQ(576px) {
+            width: 70%;
+            margin: 0;
+            margin-bottom: 10px;
+        }
+
+    }
+
+    button {
+        border-radius: 0.2em;
+        margin-top: 5px;
+        outline: none;
+        color: $lightGrayishBlue;
+        font-weight: 700;
+        font-size: 0.75rem;
+        border: none;
+        background: $brightBlue;
+        padding: 0.7rem 1rem;
+        border-radius: 0.2em;
+        cursor: pointer;
+
+        @include mQ(576px) {
+            font-size: 0.8em;
+            padding: 0.9rem 1.75rem 0.9rem 1.75rem;
+            margin-left: 0;
+        }
+    }
+}
+
+
+footer {
+
+    background: $veryDarkBlue;
+    color: $lightGrayishBlue;
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+        justify-content: flex-start;
+        padding-bottom: 30px;
+
+        @include mQ(576px) {
+            width: 90%;
+            margin: 0 auto;
+        }
+    }
+
+
+
+    .logo,
+    .row {
+        width: 90%;
+        margin: 0 auto;
+
+        @include mQ(576px) {
+            width: 100%;
+        }
+
+    }
+
+    .logo {
+        margin-left: 5%;
+        margin-top: 80px;
+        margin-bottom: 25px;
+        width: 176px;
+        height: 52px;
+
+        @include mQ(576px) {
+            margin-left: 0;
+            margin-top: 80px;
+            margin-bottom: 30px;
+            width: 120px;
+            height: 30px;
+        }
+
+
+    }
+
+    .row {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-column-gap: 0;
+        grid-row-gap: 45px;
+
+        @include mQ(576px) {
+            grid-template-columns: repeat(4, 1fr);
+            grid-column-gap: 25px;
+            grid-row-gap: 0;
+        }
+
+    }
+
+    .col {
+        display: flex;
+        flex-direction: column;
+
+        img {
+            width: 18px;
+            height: 18px;
+        }
+    }
+
+    .phone,
+    .email {
+        display: flex;
+        margin-top: 10px;
+        margin-bottom: 10px;
+
+
+
+        p {
+            margin-left: 15px;
+            font-size: 1em;
+            margin-top: -3px;
+            letter-spacing: 1.5px;
+
+            @include mQ(576px) {
+                font-size: 1em;
+                letter-spacing: normal;
+            }
+        }
+    }
+
+
+
+    .about,
+    .careers {
+        p {
+            margin-top: 7.5px;
+            margin-bottom: 7.5px;
+            font-size: 0.9em;
+
+            @include mQ(576px) {
+                font-size: 1em;
+
+
+            }
+        }
+    }
+
+    .social {
+        ul {
+            display: flex;
+            flex-direction: row;
+            width: 37%;
+            margin: 0 auto;
+            justify-content: space-around;
+
+            @include mQ(576px) {
+                width: 45%;
+                margin-left: 0;
+            }
+
+            li {
+
+                width: 1.8em;
+                height: 1.8em;
+                border: 1px solid white;
+                border-radius: 50%;
+                background: transparent;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                @include mQ(576px) {
+                    margin: 0 5px 0 5px;
+                }
+
+            }
+
+            i {
+                font-size: 1em;
+            }
+        }
+
+    }
+
+}
